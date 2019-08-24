@@ -3,3 +3,9 @@ body {
   min-height: 75rem;
   padding-top: 4.5rem;
 }
+.mt-10 {
+  margin-top: 20px;
+}
+.mb-10 {
+  margin-bottom: 20px;
+}

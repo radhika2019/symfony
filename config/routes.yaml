@@ -1,10 +1,6 @@
-index:
-    path: /
-    controller: App\Controller\DefaultController::index
-
 news:
-    path: /news/{slug}
-    controller: App\Controller\DefaultController::show
+    path: /
+    controller: App\Controller\ArticleAdminController::list
 
 article_toggle_heart:
     path: /news/{slug}/heart
@@ -14,3 +10,7 @@ article_toggle_heart:
 add_article:
     path: /admin/article/new
     controller: App\Controller\ArticleAdminController::new
+
+list_article:
+    path: /admin/article/list
+    controller: App\Controller\ArticleAdminController::list

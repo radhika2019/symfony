@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title %}List articles{% endblock %}
+{% block body %}
+<div class="row">
+    <div class="col-md-12 text-right">
+    	<a type="button" class="btn btn-primary" href="{{ path('add_article') }}">Add New</a>
+    </div>
+</div>
+<div class="row  mt-10">
+    <div class="col-md-12">
+    <table class="table">
+    <tr>
+    <th>TITLE</th>
+     <th>SLUG</th>
+      <th>ID</th>
+       <th>ACTION</th>
+    </tr>
+	    {% for article in articles %}
+		    <tr>
+		    	<td>{{ article.title }}</td>
+		    	<td>{{ article.slug }}</td>
+		    	<td>{{ article.id }}</td>
+		    	<td><a class="nav-link" href="{{ path('news', {slug: article.slug}) }}">Show</a></td>
+		    <tr>
+	    {% endfor %}
+    </table>
+    </div>
+</div>
+{% endblock %}   
